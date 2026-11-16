@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>隐私政策 - 简记本</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif; background: #FCFAF5; color: #2C2A26; line-height: 1.75; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+  header { text-align: center; padding: 40px 0 32px; }
+  .logo { width: 60px; height: 60px; border-radius: 15px; margin: 0 auto 16px; display: block; box-shadow: 0 8px 18px rgba(107,74,30,.18); }
+  h1 { font-size: 26px; font-weight: 700; }
+  .sub { color: #6E685D; font-size: 14px; margin-top: 8px; }
+  .owner { display: inline-block; margin-top: 10px; padding: 3px 12px; border-radius: 999px; background: #E3F1EA; color: #2E7D5B; font-size: 12px; font-weight: 600; }
+  .card { background: #fff; border-radius: 16px; padding: 32px; margin-top: 24px; }
+  h2 { font-size: 18px; font-weight: 700; margin-bottom: 12px; color: #2C2A26; }
+  p { font-size: 15px; color: #4A463D; margin-bottom: 10px; }
+  ul { padding-left: 20px; font-size: 15px; color: #4A463D; }
+  li { margin-bottom: 6px; }
+  .hl { background: linear-gradient(135deg,#FFF3DC 0%,#E6F7EF 100%); border-radius: 12px; padding: 16px 20px; font-size: 14px; color: #2C2A26; margin: 16px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 12px 0; }
+  th, td { border: 1px solid #F1EADD; padding: 10px 12px; text-align: left; vertical-align: top; }
+  th { background: #FFF8EE; font-weight: 600; white-space: nowrap; }
+  footer { text-align: center; color: #8C867A; font-size: 13px; margin-top: 40px; }
+  a { color: #0E7A6E; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <img class="logo" src="应用图标-512.png" alt="简记本 应用图标" width="60" height="60">
+  <h1>简记本 · 隐私政策</h1>
+  <div class="sub">更新日期：2026-11-15 ｜ 版本：v2.1.0</div>
+  <div class="owner">应用名称：简记本 · 包名 com.ledger.offline</div>
+</header>
+
+<div class="card">
+  <div class="hl">摘要：「简记本」是一款<b>纯本地记账工具</b>，不提供账号注册，不收集个人信息。应用未申请互联网（INTERNET）权限、不联网，账目数据只保存在本机；未集成任何第三方统计、广告或崩溃上报 SDK，不上传、不共享你的数据。系统确实申请的通知、精确闹钟、开机广播及备份调度组件带入的权限，均与联网无关，逐条说明见下文。</div>
+
+  <h2>一、我们收集哪些信息</h2>
+  <ul>
+    <li>本应用是一款纯本地工具，<b>不提供账号注册</b>，不要求填写手机号、姓名、身份证等任何个人身份信息。</li>
+    <li>本应用不收集设备标识（如 IMEI、OAID、Android ID）、精确位置、通讯录、短信、通话记录、应用列表、剪贴板等信息。</li>
+    <li>本应用未申请互联网（INTERNET）权限，运行过程中不会向任何服务器发送数据，不联网、不上传，开发者无法获取你在应用内产生的任何内容。</li>
+    <li>本应用不集成任何第三方统计、广告 SDK，也不进行崩溃上报（详见第四节）。</li>
+  </ul>
+
+  <h2>二、数据保存在哪里</h2>
+  <ul>
+    <li>本地记账数据（收支、转账、退款、报销、预算、分类、账户、资产、工资条）与记账设置，保存在本机「应用私有存储」的 <b>Room 本地数据库 ledger.db</b> 中。</li>
+    <li>你主动选择的头像图片，以及为账单附加的凭证图片，都保存在本机应用私有目录下；凭证图片会压缩到长边 1600 像素以内，每笔账单最多 1 张。</li>
+    <li>每日提醒开关、提醒时间、主题与上次备份时间等设置，保存在应用私有偏好文件 ledger_settings 中。</li>
+    <li>删除的账单会先进入本机<b>回收站</b>（软删），30 天内可在「我的 → 回收站」恢复，到期自动彻底清除；回收站中的记录同样只保存在本机，不会上传。</li>
+    <li>以上内容<b>仅保存在本机</b>，其他应用无法读取，也不会自动同步或上传云端（本应用不具备该能力）。</li>
+    <li>数据只存本机：卸载应用或在系统设置中清除应用数据，即可一次性删除全部本机数据（含回收站），且无法恢复。</li>
+  </ul>
+
+  <h2>三、系统权限说明</h2>
+  <p>下表逐条列出本应用<b>实际申请</b>的权限（以合并后的 AndroidManifest 为准）及用途。应用<b>未申请 INTERNET 权限</b>，以下权限均不授予联网能力。</p>
+  <table>
+    <tr><th>权限</th><th>用途</th><th>说明</th></tr>
+    <tr><td>通知<br>POST_NOTIFICATIONS</td><td>「未记账提醒」</td><td>在你设定的时间（默认 20:30）发送一条「今天还没有记账」的提醒；仅当天没有任何记账记录时才发送，由系统闹钟到点唤醒应用检查，无论应用是否打开。不推送广告或营销内容，可在应用内或系统设置中随时关闭。Android 13 以下系统不需要该权限。</td></tr>
+    <tr><td>精确闹钟<br>SCHEDULE_EXACT_ALARM</td><td>提醒准时触发</td><td>让系统在设定时刻准时触发提醒，避免被省电策略延后。闹钟由系统托管，应用不常驻后台、不启动后台服务、不联网、不采集信息；「未记账提醒」与「借还还款提醒」相互独立：关闭前者只取消每日未记账提醒，还款提醒由每笔借还账的「是否提醒」单独控制。Android 12 以下系统不需要精确闹钟权限；Android 13 及以上同时声明了系统自动授予的 USE_EXACT_ALARM，以该权限为准。</td></tr>
+    <tr><td>精确闹钟（自动授予）<br>USE_EXACT_ALARM</td><td>新装即准时触发</td><td>Android 13 及以上系统提供，安装时由系统自动授予、用户无需手动开启也不可关闭，用于保证 Android 14 及以上新安装的应用仍能准时触发「未记账提醒」与「借还还款提醒」，避免被系统默认拒绝后静默降级成不精确闹钟。仅作用于本机闹钟，不联网、不采集信息、不启动后台服务；Android 12 及以下系统不使用该权限。该权限受 Google Play 闹钟类应用政策限制，本应用仅通过国内安卓应用市场分发。</td></tr>
+    <tr><td>开机广播<br>RECEIVE_BOOT_COMPLETED</td><td>重启后恢复提醒</td><td>设备重启、系统时间或时区变更、应用更新后，重新排程已设置的提醒；不常驻后台、不联网、不采集信息。</td></tr>
+    <tr><td>唤醒锁<br>WAKE_LOCK</td><td>保证自动备份跑完</td><td>由 AndroidX WorkManager 等系统组件合并带入，仅用于保证本机自动备份任务能按期完成，不联网、不传输数据。</td></tr>
+    <tr><td>网络状态<br>ACCESS_NETWORK_STATE</td><td>备份调度组件带入</td><td>由 AndroidX WorkManager 等系统组件合并带入，备份调度组件用它读取网络状态以安排本机备份任务；<b>不授予任何联网能力</b>。应用未申请 INTERNET 权限，无法联网，也不会传输任何数据。</td></tr>
+    <tr><td>动态广播保护<br>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</td><td>保护内部广播</td><td>由 AndroidX 组件合并带入的签名级权限，用于保护应用内部动态注册的广播接收器不被外部应用调用，仅在本机使用。</td></tr>
+  </table>
+  <p>本应用<b>明确未申请 INTERNET 权限，不联网，无三方统计 / 广告 SDK</b>。此外亦未申请：精确定位、通讯录、短信、通话记录、麦克风、日历、身体传感器、设备标识（IMEI / OAID / Android ID）、应用列表、外部存储读写（READ / WRITE_EXTERNAL_STORAGE）、常驻后台服务等权限。备份写入用户自选目录通过系统文件选择器（SAF）完成，无需申请存储权限。</p>
+
+  <h2>四、第三方 SDK</h2>
+  <p>本应用未集成任何第三方 SDK，不包含广告 SDK、统计 SDK、崩溃上报 SDK，不与任何第三方共享、转让或公开披露你的信息，也不上传任何数据。</p>
+  <p>「我的 → 关于 → 支持开发者」仅在本机展示一张随应用内置的静态赞赏码图片，供用户自愿赠与；该行为不解锁任何功能、不提供任何特权，不影响数据与界面。本应用不集成支付接口、不参与交易、不记录赞赏结果，扫码与付款均在微信内完成；本功能不联网、不收集也不上传任何信息。</p>
+
+  <h2>五、数据备份与恢复</h2>
+  <ul>
+    <li><b>手动备份</b>：可在「我的 → 数据备份 / 恢复」导出备份文件，通过系统文件选择器（SAF）保存到你自己选定的目录。</li>
+    <li><b>自动备份</b>：可开启自动备份（基于本机周期性任务），按周期备份到你通过 SAF 授权的用户自选目录；备份任务仅在本机执行，不联网。</li>
+    <li><b>可选加密</b>：备份可开启 <b>AES-256-GCM 加密</b>（由用户口令经 PBKDF2 派生 256 位密钥），口令只由你本人保管；不加密时为普通备份文件。</li>
+    <li>备份含全部账目、账户、分类、工资条、存钱计划与<b>账单凭证图片</b>，重新导入即可完整恢复；头像与个性化设置不在备份内。备份文件由你自己保管，应用不会把备份上传到任何地方。</li>
+  </ul>
+
+  <h2>六、你的权利</h2>
+  <ul>
+    <li><b>导出</b>：可随时将全部数据导出为备份文件（可选加密），由你自己保管或迁移到新设备。</li>
+    <li><b>删除与恢复</b>：应用内删除账单先进入回收站，30 天内可随时恢复，也可在回收站中彻底删除；卸载应用或在系统设置中清除应用数据，即可一次性删除本机全部数据（含回收站），且无法恢复。</li>
+    <li>由于数据只存于本机，开发者无法查询、导出或替你恢复数据。</li>
+    <li>可在系统「设置 → 应用 → 简记本 → 权限」中随时关闭通知权限，也可在应用内关闭每日提醒（会同时取消已排的系统闹钟）。</li>
+  </ul>
+
+  <h2>七、未成年人（儿童）说明</h2>
+  <p>本应用适合各年龄段用户，且不提供账号注册、不收集个人信息。若使用者为未成年人，建议在监护人指导下使用，并由监护人协助管理账目与备份。</p>
+
+  <h2>八、政策更新</h2>
+  <p>本政策如有更新，我们会在应用内以弹窗或页面形式提示。继续使用即表示你接受更新后的政策。</p>
+
+  <h2>九、联系我们与 APP 备案信息</h2>
+  <p>本隐私政策由「简记本」开发者发布，运营主体以应用市场公示信息为准。如对本政策有疑问，可通过以下联系方式与开发者联系：2759784060@qq.com。</p>
+  <p>APP 备案信息：本应用为纯本地单机应用，不提供联网服务，按现行规定无需办理 APP 备案；相关信息以应用市场公示为准。</p>
+</div>
+
+<footer>简记本 v2.1.0 ｜ 本页面可托管为静态网页，用于应用市场隐私政策链接</footer>
+
+</div>
+</body>
+</html>
